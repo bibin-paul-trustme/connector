@@ -1,0 +1,1 @@
+from scanners.trivy_scan import trivy_scan
