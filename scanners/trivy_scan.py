@@ -12,8 +12,7 @@ import requests
 import zipfile 
 import xml.etree.ElementTree as ET
 from configurations.logfile import setup_logger
-from services.svn_services import branch_list
-from services.svn_services import repo_update
+from services.svn_services import branch_list, repo_update, push_data
 
 script_path = os.path.abspath(__file__)
 script_filename = os.path.basename(script_path)
@@ -28,8 +27,8 @@ def remove_readonly(func, path, _):
     os.chmod(path, stat.S_IWRITE)
     func(path)
 
-def push_data(response_data):
-    print(response_data)
+# def push_data(response_data):
+#     print(response_data)
     # logging.info(script_filename + ' - Pushing data to the portal')
     # json_result = json.dumps(response_data, indent=2)
     # with open('trivy.json', 'w') as json_file:

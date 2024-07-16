@@ -42,20 +42,25 @@ def branch_list(account):
 
 def repo_update(url):
     print('============Repo Update======================')
-    print(url)
+    print('``````', url)
     if url.endswith('/'):
+        print(url.split('/')[-1])
         folder_name = url.split('/')[-2]
-        url = url.split('/')[-1]
+        url =url[:-1]   
     else:
         folder_name = url.split('/')[-1]
+    print('--------', url)
     print(os.path.exists(folder_name) and os.path.isdir(folder_name))
     if os.path.exists(folder_name) and os.path.isdir(folder_name):
         svn_cmd = [svn_path,  '--no-auth-cache', '--trust-server-cert', '--non-interactive', 'update', folder_name]
         response_repo = subprocess.run(svn_cmd, capture_output=True, text=True)
     else:
-
         svn_cmd = [svn_path,  '--no-auth-cache', '--trust-server-cert', '--non-interactive', 'checkout', url]
-        print(svn_cmd)
+        print('==========', svn_cmd)
         response_repo = subprocess.run(svn_cmd, capture_output=True, text=True)
         print(response_repo)
     return response_repo 
+
+
+def push_data(response_data):
+    print(response_data)

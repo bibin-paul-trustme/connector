@@ -1,0 +1,10 @@
+amtech/*
+java_code_repo/*
+net_repo/*
+*.pyc
+*.json
+*.html
+*.css
+*.log
+
+
