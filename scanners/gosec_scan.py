@@ -132,14 +132,18 @@ def gosec_scan():
                 
                 if response.returncode == 0:
                     print('Scanning started')
-                    folder_name = folder_name +'/' + branch
-                    print(folder_name)
-                    gosec_scan_command = r"gosec -exclude=G101 -fmt=json %s\.\..." %folder_name
+                    folder_name = folder_name + '\ ' + branch
+                    print(folder_name.strip())
+                    gosec_scan_command = r"gosec -exclude=G101 -fmt=json %s\..." %folder_name.replace(' ', '')
                     result = subprocess.run(gosec_scan_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                     print(result)
-                    report = json.loads(result.stdout)
+
+                    if result.returncode == 0:
+                        report = json.loads(result.stdout)
+                    else:
+                        report = None
                     # print('==='*50)
-                    if report   :
+                    if report:
                         result_dict['url'] = url
                         result_dict['report'] = report
                         result_dict['tenant_id'] = str(config['LOCAL']['TENANT_ID'])

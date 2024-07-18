@@ -10,4 +10,7 @@
 
 
 # from scanners import gosec_scan  ## not completed
-
+# from scanners import phpmd_scan
+# from scanners import progpilot_scan ## not completed
+# from scanners import rubocop_scan
+from scanners import detekt_scan

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/cryptoaes/src/main/java/eu/kanade/tachiyomi/lib/cryptoaes/CryptoAES.kt">
+	<error line="169" column="33" severity="warning" message="The function generateKeyAndIV(keyLength: Int, ivLength: Int, iterations: Int, salt: ByteArray, password: ByteArray, md: MessageDigest) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="54" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="76" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="92" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="108" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="124" column="22" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="128" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="144" column="22" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="148" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="205" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="206" column="13" severity="warning" message="Do not rethrow a caught exception of the same type." source="detekt.RethrowCaughtException" />
+	<error line="54" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="76" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="92" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="108" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="124" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="128" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="144" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="148" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="217" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/dailymotion-extractor/src/main/java/eu/kanade/tachiyomi/lib/dailymotionextractor/DailymotionExtractor.kt">
+	<error line="59" column="39" severity="warning" message="The function videosFromProtectedUrl(url: String, prefix: String, videoId: String, htmlString: String, ts: String, v1st: String, baseUrl: String, password: String?) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="36" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="47" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="106" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="118" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="32" column="17" severity="warning" message="Private property `json` is unused." source="detekt.UnusedPrivateProperty" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/googledrive-episodes/src/main/java/eu/kanade/tachiyomi/lib/googledriveepisodes/GoogleDriveEpisodes.kt">
+	<error line="21" column="13" severity="warning" message="The function traverseFolder is too long (74). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="18" column="9" severity="warning" message="The function getEpisodesFromFolder appears to be too complex based on Cyclomatic Complexity (complexity: 16). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="83" column="43" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="114" column="43" severity="warning" message="Function parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.FunctionParameterNaming" />
+	<error line="17" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="51" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="61" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="83" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="93" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="115" column="52" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="152" column="18" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="152" column="60" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="153" column="18" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="153" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="154" column="18" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="154" column="52" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="84" column="45" severity="warning" message="`it` should not be used as name for a lambda parameter." source="detekt.ExplicitItLambdaParameter" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/playlist-utils/src/main/java/eu/kanade/tachiyomi/lib/playlistutils/PlaylistUtils.kt">
+	<error line="30" column="23" severity="warning" message="The function extractFromHls(playlistUrl: String, referer: String, masterHeaders: Headers, videoHeaders: Headers, videoNameGen: (String) -&gt; String, subtitleList: List&lt;Track&gt;, audioList: List&lt;Track&gt;) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="71" column="23" severity="warning" message="The function extractFromHls(playlistUrl: String, referer: String, masterHeadersGen: (Headers, String) -&gt; Headers, videoHeadersGen: (Headers, String, String) -&gt; Headers, videoNameGen: (String) -&gt; String, subtitleList: List&lt;Track&gt;, audioList: List&lt;Track&gt;) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="186" column="24" severity="warning" message="The function extractFromDash(mpdUrl: String, videoNameGen: (String) -&gt; String, mpdHeaders: Headers, videoHeaders: Headers, referer: String, subtitleList: List&lt;Track&gt;, audioList: List&lt;Track&gt;) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="229" column="24" severity="warning" message="The function extractFromDash(mpdUrl: String, videoNameGen: (String) -&gt; String, referer: String, mpdHeadersGen: (Headers, String) -&gt; Headers, videoHeadersGen: (Headers, String, String) -&gt; Headers, subtitleList: List&lt;Track&gt;, audioList: List&lt;Track&gt;) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="277" column="24" severity="warning" message="The function extractFromDash(mpdUrl: String, videoNameGen: (String, String) -&gt; String, referer: String, mpdHeadersGen: (Headers, String) -&gt; Headers, videoHeadersGen: (Headers, String, String) -&gt; Headers, subtitleList: List&lt;Track&gt;, audioList: List&lt;Track&gt;) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="26" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="27" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="58" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="67" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="68" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="182" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="183" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="224" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="225" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="226" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="272" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="273" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="274" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="320" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="320" column="66" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="321" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="321" column="62" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="322" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="322" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/animestream/src/eu/kanade/tachiyomi/multisrc/animestream/AnimeStream.kt">
+	<error line="41" column="16" severity="warning" message="Class &apos;AnimeStream&apos; with &apos;38&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="334" column="21" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="334" column="27" severity="warning" message="A call to the default constructor of an exception was detected. Instead one of the constructor overloads should be called. This allows to provide more meaningful exceptions." source="detekt.ThrowingExceptionsWithoutMessageOrCause" />
+	<error line="139" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/datalifeengine/src/eu/kanade/tachiyomi/multisrc/datalifeengine/DataLifeEngine.kt">
+	<error line="27" column="16" severity="warning" message="Class &apos;DataLifeEngine&apos; with &apos;18&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="71" column="39" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="71" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="74" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="83" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="86" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="198" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="199" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="63" column="5" severity="warning" message="Forbidden TODO todo marker in comment, please do the changes." source="detekt.ForbiddenComment" />
+	<error line="71" column="36" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/dooplay/src/eu/kanade/tachiyomi/multisrc/dooplay/DooPlay.kt">
+	<error line="31" column="16" severity="warning" message="Class &apos;DooPlay&apos; with &apos;41&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="416" column="52" severity="warning" message="Private function `asUriPart` is unused." source="detekt.UnusedPrivateMember" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/dopeflix/src/eu/kanade/tachiyomi/multisrc/dopeflix/DopeFlix.kt">
+	<error line="255" column="18" severity="warning" message="The function setupPreferenceScreen is too long (72). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="31" column="16" severity="warning" message="Class &apos;DopeFlix&apos; with &apos;31&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="174" column="82" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/zorotheme/src/eu/kanade/tachiyomi/multisrc/zorotheme/ZoroTheme.kt">
+	<error line="342" column="18" severity="warning" message="The function setupPreferenceScreen is too long (90). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="35" column="16" severity="warning" message="Class &apos;ZoroTheme&apos; with &apos;32&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="44" column="17" severity="warning" message="Private property `json` is unused." source="detekt.UnusedPrivateProperty" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/googledrive/src/eu/kanade/tachiyomi/animeextension/all/googledrive/GoogleDrive.kt">
+	<error line="431" column="17" severity="warning" message="The function parsePage is too long (61). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="650" column="18" severity="warning" message="The function setupPreferenceScreen is too long (64). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="187" column="26" severity="warning" message="The function getAnimeDetails appears to be too complex based on Cyclomatic Complexity (complexity: 16). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="258" column="26" severity="warning" message="The function getEpisodeList appears to be too complex based on Cyclomatic Complexity (complexity: 29). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="431" column="17" severity="warning" message="The function parsePage appears to be too complex based on Cyclomatic Complexity (complexity: 16). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="42" column="7" severity="warning" message="Class &apos;GoogleDrive&apos; with &apos;27&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="290" column="17" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="307" column="43" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="366" column="58" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="445" column="13" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="469" column="35" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="196" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="289" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="444" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="508" column="9" severity="warning" message="Function parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.FunctionParameterNaming" />
+	<error line="187" column="26" severity="warning" message="Function getAnimeDetails has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="282" column="13" severity="warning" message="Function traverseFolder has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="623" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="46" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="511" column="52" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="535" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="535" column="64" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="536" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="536" column="60" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="537" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="537" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="308" column="45" severity="warning" message="`it` should not be used as name for a lambda parameter." source="detekt.ExplicitItLambdaParameter" />
+	<error line="470" column="37" severity="warning" message="`it` should not be used as name for a lambda parameter." source="detekt.ExplicitItLambdaParameter" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/googledriveindex/src/eu/kanade/tachiyomi/animeextension/all/googledriveindex/GoogleDriveIndex.kt">
+	<error line="232" column="26" severity="warning" message="The function getAnimeDetails is too long (64). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="550" column="17" severity="warning" message="The function parsePage is too long (64). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="363" column="17" severity="warning" message="The function traverseDirectory is too long (63). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="232" column="26" severity="warning" message="The function getAnimeDetails appears to be too complex based on Cyclomatic Complexity (complexity: 15). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="311" column="26" severity="warning" message="The function getEpisodeList appears to be too complex based on Cyclomatic Complexity (complexity: 27). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="232" column="26" severity="warning" message="Function getAnimeDetails is nested too deeply." source="detekt.NestedBlockDepth" />
+	<error line="311" column="26" severity="warning" message="Function getEpisodeList is nested too deeply." source="detekt.NestedBlockDepth" />
+	<error line="41" column="7" severity="warning" message="Class &apos;GoogleDriveIndex&apos; with &apos;30&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="141" column="56" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="448" column="26" severity="warning" message="Function getVideoList has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="104" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="174" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="184" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="185" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="275" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="378" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="414" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="648" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="669" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="496" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="496" column="74" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="522" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="522" column="64" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="523" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="523" column="60" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="524" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="524" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/jellyfin/src/eu/kanade/tachiyomi/animeextension/all/jellyfin/Jellyfin.kt">
+	<error line="771" column="52" severity="warning" message="The function editTextPreference(key: String, title: String, default: String, value: String, isPassword: Boolean, placeholder: String, mediaLibPref: MediaLibPreference) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="520" column="18" severity="warning" message="The function setupPreferenceScreen is too long (150). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="358" column="18" severity="warning" message="The function videoListParse is too long (94). The maximum length is 60." source="detekt.LongMethod" />
+	<error line="358" column="18" severity="warning" message="The function videoListParse appears to be too complex based on Cyclomatic Complexity (complexity: 19). Defined complexity threshold for methods is set to &apos;15&apos;" source="detekt.CyclomaticComplexMethod" />
+	<error line="358" column="18" severity="warning" message="Function videoListParse is nested too deeply." source="detekt.NestedBlockDepth" />
+	<error line="41" column="7" severity="warning" message="Class &apos;Jellyfin&apos; with &apos;21&apos; functions detected. Defined threshold inside classes is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="56" column="104" severity="warning" message="This empty block of code can be removed." source="detekt.EmptyFunctionBlock" />
+	<error line="60" column="104" severity="warning" message="This empty block of code can be removed." source="detekt.EmptyFunctionBlock" />
+	<error line="398" column="42" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="535" column="30" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="749" column="34" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="797" column="26" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="226" column="44" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="253" column="44" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="354" column="46" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="398" column="42" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="749" column="34" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="797" column="26" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="108" column="17" severity="warning" message="Function login has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="390" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="451" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="533" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="771" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="91" column="13" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="91" column="45" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="91" column="54" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="91" column="59" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="275" column="47" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="277" column="35" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="285" column="47" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="374" column="21" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="375" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/jellyfin/src/eu/kanade/tachiyomi/animeextension/all/jellyfin/JellyfinDto.kt">
+	<error line="133" column="19" severity="warning" message="The function toSEpisode(baseUrl: String, userId: String, apiKey: String, epDetails: Set&lt;String&gt;, epType: EpisodeType, prefix: String) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="176" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="176" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="177" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="177" column="54" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="178" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="178" column="50" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="185" column="30" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="186" column="33" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="187" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="189" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="190" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/cloudflare-interceptor/src/main/java/eu/kanade/tachiyomi/lib/cloudflareinterceptor/CloudflareInterceptor.kt">
+	<error line="43" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="78" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="93" column="21" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/gogostream-extractor/src/main/java/eu/kanade/tachiyomi/lib/gogostreamextractor/GogoStreamExtractor.kt">
+	<error line="44" column="54" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/megacloud-extractor/src/main/java/eu/kanade/tachiyomi/lib/megacloudextractor/MegaCloudExtractor.kt">
+	<error line="70" column="21" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="117" column="27" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="147" column="49" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="90" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="90" column="65" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/vidhide-extractor/src/main/java/eu/kanade/tachiyomi/lib/vidhideextractor/VidHideExtractor.kt">
+	<error line="46" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="23" column="9" severity="warning" message="Function videosFromUrl has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="23" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/dopeflix/src/eu/kanade/tachiyomi/multisrc/dopeflix/extractors/DopeFlixExtractor.kt">
+	<error line="84" column="27" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="94" column="49" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="42" column="78" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="17" severity="warning" message="Private property `mutex` is unused." source="detekt.UnusedPrivateProperty" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/cda-extractor/src/main/java/eu/kanade/tachiyomi/lib/cdaextractor/CdaExtractor.kt">
+	<error line="18" column="7" severity="warning" message="The file name &apos;CdaExtractor&apos; does not match the name of the single top-level declaration &apos;CdaPlExtractor&apos;." source="detekt.MatchingDeclarationName" />
+	<error line="35" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="88" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="88" column="32" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="88" column="38" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="88" column="48" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="88" column="54" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/dailymotion-extractor/src/main/java/eu/kanade/tachiyomi/lib/dailymotionextractor/DailymotionDto.kt">
+	<error line="47" column="5" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="48" column="5" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/zorotheme/src/eu/kanade/tachiyomi/multisrc/zorotheme/ZoroThemeFilters.kt">
+	<error line="76" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="77" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="78" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="79" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="80" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="81" column="9" severity="warning" message="Constructor parameter names should match the pattern: [a-z][A-Za-z0-9]*" source="detekt.ConstructorParameterNaming" />
+	<error line="17" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="186" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="186" column="43" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="190" column="41" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="194" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/chillx-extractor/src/main/java/eu/kanade/tachiyomi/lib/chillxextractor/ChillxExtractor.kt">
+	<error line="87" column="9" severity="warning" message="The destructuring declaration contains 4 but only 3 are allowed." source="detekt.DestructuringDeclarationWithTooManyEntries" />
+	<error line="32" column="9" severity="warning" message="Function videoFromUrl has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="95" column="43" severity="warning" message="`it` should not be used as name for a lambda parameter." source="detekt.ExplicitItLambdaParameter" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/cryptoaes/src/main/java/eu/kanade/tachiyomi/lib/cryptoaes/Deobfuscator.kt">
+	<error line="46" column="17" severity="warning" message="Function getMatchingBracketIndex has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="63" column="17" severity="warning" message="Function calculateDigit has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="23" column="9" severity="warning" message="The loop contains more than one break or continue statement. The code should be refactored to increase readability." source="detekt.LoopWithTooManyJumpStatements" />
+	<error line="77" column="32" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/dataimage/src/main/java/eu/kanade/tachiyomi/lib/dataimage/DataImageInterceptor.kt">
+	<error line="54" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/fastream-extractor/src/main/java/eu/kanade/tachiyomi/lib/fastreamextractor/FastreamExtractor.kt">
+	<error line="24" column="9" severity="warning" message="Function videosFromUrl has 5 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="28" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/googledrive-extractor/src/main/java/eu/kanade/tachiyomi/lib/googledriveextractor/GoogleDriveExtractor.kt">
+	<error line="14" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="30" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/javcoverfetcher/src/main/java/eu/kanade/tachiyomi/lib/javcoverfetcher/JavCoverFetcher.kt">
+	<error line="131" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/okru-extractor/src/main/java/eu/kanade/tachiyomi/lib/okruextractor/OkruExtractor.kt">
+	<error line="39" column="75" severity="warning" message="This explicit usage of `it` as the lambda parameter name can be omitted." source="detekt.ExplicitItLambdaParameter" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/streamtape-extractor/src/main/java/eu/kanade/tachiyomi/lib/streamtapeextractor/StreamTapeExtractor.kt">
+	<error line="10" column="9" severity="warning" message="Function videoFromUrl has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="30" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="14" column="47" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/streamwish-extractor/src/main/java/eu/kanade/tachiyomi/lib/streamwishextractor/StreamWishExtractor.kt">
+	<error line="16" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/synchrony/src/main/java/eu/kanade/tachiyomi/lib/synchrony/Deobfuscator.kt">
+	<error line="9" column="9" severity="warning" message="Function deobfuscateScript has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/unpacker/src/main/java/eu/kanade/tachiyomi/lib/unpacker/SubstringExtractor.kt">
+	<error line="33" column="9" severity="warning" message="Function substringBetween has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/unpacker/src/main/java/eu/kanade/tachiyomi/lib/unpacker/Unpacker.kt">
+	<error line="66" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="73" column="43" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="78" column="43" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/uqload-extractor/src/main/java/eu/kanade/tachiyomi/lib/uqloadextractor/UqloadExtractor.kt">
+	<error line="10" column="9" severity="warning" message="Function videosFromUrl has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/vidbom-extractor/src/main/java/eu/kanade/tachiyomi/lib/vidbomextractor/VidBomExtractor.kt">
+	<error line="19" column="34" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/vidsrc-extractor/src/main/java/eu/kanade/tachiyomi/lib/vidsrcextractor/VidSrcExtractor.kt">
+	<error line="36" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="55" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/voe-extractor/build.gradle.kts">
+	<error line="7" column="2" severity="warning" message="The file C:\Users\user\Desktop\Broker_final\PythonBuild_V2\connector\kotlin_repo\trunk\lib\voe-extractor\build.gradle.kts is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib/voe-extractor/src/main/java/eu/kanade/tachiyomi/lib/voeextractor/VoeExtractor.kt">
+	<error line="26" column="9" severity="warning" message="Function videosFromUrl has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="28" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/animestream/src/eu/kanade/tachiyomi/multisrc/animestream/AnimeStreamFilters.kt">
+	<error line="90" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="91" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="92" column="55" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="93" column="57" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/datalifeengine/build.gradle.kts">
+	<error line="5" column="20" severity="warning" message="The file C:\Users\user\Desktop\Broker_final\PythonBuild_V2\connector\kotlin_repo\trunk\lib-multisrc\datalifeengine\build.gradle.kts is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/lib-multisrc/dopeflix/src/eu/kanade/tachiyomi/multisrc/dopeflix/DopeFlixFilters.kt">
+	<error line="17" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/googledrive/src/eu/kanade/tachiyomi/animeextension/all/googledrive/GoogleDriveMultiFormReqs.kt">
+	<error line="9" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="14" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="17" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="18" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/jellyfin/src/eu/kanade/tachiyomi/animeextension/all/jellyfin/JellyfinAuthenticator.kt">
+	<error line="52" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="67" column="20" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/jellyfin/src/eu/kanade/tachiyomi/animeextension/all/jellyfin/JellyfinConstants.kt">
+	<error line="30" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="31" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="32" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="33" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="34" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="35" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="36" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="37" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="38" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="39" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="40" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="41" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="42" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="43" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="44" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="45" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="46" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="47" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="48" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="49" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="50" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="51" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="52" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="53" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="54" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="60" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="61" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="62" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="63" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="65" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="68" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="71" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="72" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="73" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="74" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="78" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="80" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="81" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="82" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="83" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="84" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="85" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="87" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="89" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="91" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="92" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="93" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="96" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="98" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="100" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="101" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="102" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="103" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="104" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="106" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="108" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="109" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="110" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="112" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="113" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="115" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="118" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="119" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="121" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="122" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="123" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="124" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="126" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="127" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="5" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="5" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="5" column="27" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="5" column="35" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="6" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="6" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="6" column="27" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="6" column="35" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="7" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="7" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="7" column="27" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="7" column="36" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="8" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="8" column="22" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="8" column="27" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="8" column="36" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="9" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="9" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="9" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="9" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="10" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="10" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="10" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="10" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="11" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="11" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="11" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="11" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="12" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="12" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="12" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="12" column="38" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="13" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="13" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="13" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="13" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="14" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="14" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="14" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="14" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="15" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="15" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="15" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="15" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="16" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="16" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="16" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="16" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="17" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="17" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="17" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="17" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="18" column="17" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="18" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="18" column="29" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="18" column="40" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="C:/Users/user/Desktop/Broker_final/PythonBuild_V2/connector/kotlin_repo/trunk/src/all/jellyfin/src/eu/kanade/tachiyomi/animeextension/all/jellyfin/JellyfinFactory.kt">
+	<error line="9" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+</checkstyle>
