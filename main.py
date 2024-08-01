@@ -4,13 +4,11 @@
 # from scanners.roslynator_scan import rosylnator_scan
 # from scanners import ruff_scan
 # from scanners import bandit_scan
-
-
-
-
-
-# from scanners import gosec_scan  ## not completed
-# from scanners import phpmd_scan
-# from scanners import progpilot_scan ## not completed
 # from scanners import rubocop_scan
-from scanners import detekt_scan
+# from scanners import detekt_scan
+# from scanners import phpmd_scan
+# from scanners import gosec_scan
+# from scanners import progpilot_scan
+
+from services import language_detection ## not completed
+

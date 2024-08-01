@@ -82,9 +82,9 @@ def count_calculation(data, url, tenant, branch, chunk_name):
     print(response.text)
     
 def nomalize_data(data, url, tenant, branch):
-
+    print(data)
     vulnerabilities = []
-    for report_result in data.get('Issues', []):
+    for report_result in data['report'].get('Issues', []):
         # directory, filename = os.path.split(report_result.get('file'))
         line_number = report_result.get('line', '1')
         split_line_number = line_number.split("-")
@@ -132,17 +132,18 @@ def gosec_scan():
                 
                 if response.returncode == 0:
                     print('Scanning started')
-                    folder_name = folder_name + '\ ' + branch
-                    print(folder_name.strip())
-                    gosec_scan_command = r"gosec -exclude=G101 -fmt=json %s\..." %folder_name.replace(' ', '')
-                    result = subprocess.run(gosec_scan_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                    # folder_name = folder_name + '\ ' + branch
+                    folder_name = os.path.join(folder_name, branch).strip().replace(' ', '').replace('/', '\\')
+                    folder_name = rf".\{folder_name}"
+                    gosec_scan_command = ["gosec", "-exclude=G101", "-fmt=json", ".\\..."]
+                    result = subprocess.run(gosec_scan_command, cwd=folder_name, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                     print(result)
-
-                    if result.returncode == 0:
+                    if result.returncode == 1:
                         report = json.loads(result.stdout)
                     else:
                         report = None
-                    # print('==='*50)
+                    print('==='*50)
+                    print(report)
                     if report:
                         result_dict['url'] = url
                         result_dict['report'] = report
@@ -164,10 +165,12 @@ def gosec_scan():
             if response_repo.returncode == 0:
                 print('Scanning started')
 
-                gosec_scan_command = r"gosec -exclude=G101 -fmt=json %s/./..." %folder_name
-                print(gosec_scan_command)
-                result = subprocess.run(gosec_scan_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-                report = json.loads(result.stdout)
+                folder_name = os.path.join(folder_name, branch).strip().replace(' ', '').replace('/', '\\')
+                folder_name = rf".\{folder_name}"
+                gosec_scan_command = ["gosec", "-exclude=G101", "-fmt=json", ".\\..."]
+                result = subprocess.run(gosec_scan_command, cwd=folder_name, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                print(result.stdout)
+
                 print('==='*50)
                 if report['files'] != []:
                     result_dict['url'] = url

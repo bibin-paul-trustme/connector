@@ -11,3 +11,4 @@ ruby_repo/*
 *.html
 *.css
 *.log
+test.py

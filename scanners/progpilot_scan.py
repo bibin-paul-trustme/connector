@@ -1,3 +1,4 @@
+import csv
 import os
 import subprocess
 import configparser
@@ -17,6 +18,14 @@ from services.svn_services import branch_list, repo_update, push_data
 config = configparser.ConfigParser()
 config.read("svn_config.ini")
 
+def search_csv(search_id):
+    file_path = config['LOCAL']['cwe_data_file']
+    with open(file_path, 'r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['CWE-ID'] == search_id:
+                return row['Name']
+        return None
 
 def decode_base64(encoded_data):
     encoded_data = encoded_data.encode('utf-8')
@@ -72,28 +81,42 @@ def count_calculation(data, url, tenant, branch, chunk_name):
     print(response.text)
     
 def nomalize_data(data, url, tenant, branch):
-    print(data)
-    report = []
-    if data['report']['files']:
-        for file_info in data['report']['files']:
-            filename = file_info["file"]
-            for violation in file_info["violations"]:
-                if violation["priority"] == 1:
-                    severity = 'HIGH'
-                elif violation["priority"] in [2, 3]:
-                    severity = 'MEDIUM'
-                else:
-                    severity = 'LOW'
-                violations = {
-                    "filename": filename,
-                    "begin_line": violation["beginLine"],
-                    "description": violation["description"],
-                    "rule": violation["rule"],
-                    "severity": severity,
-                    "rule_set": violation["ruleSet"]
-                }
-                report.append(violations)
-    print(report)
+
+    severity_mapping = {
+        "CWE_79": "Medium",
+        "CWE_98": "High",
+        "CWE_95": "High",
+        "CWE_78": "High",
+        "CWE_90": "Medium",
+        "CWE_89": "Medium",
+        "CWE_285": "Medium",
+        "CWE_1004": "Medium",
+        "CWE_346": "Medium",
+        "CWE_295": "High",
+        "CWE_91": "Medium",
+        "CWE_22": "Medium",
+        "CWE_601": "Medium",
+        "CWE_1333": "Medium"
+    }
+    vulnerabilities = []
+    for report_result in data['report']:
+        directory, filename = os.path.split(report_result.get('sink_file',''))
+        line_number = report_result.get('sink_line', '1')
+        filename = filename
+        cwe_id = report_result.get('vuln_cwe')
+        severity_str = severity_mapping.get(cwe_id, "Low")
+        result_data = {
+            'title': search_csv(str(cwe_id.split('_')[1])),
+            'filename': filename,
+            'line_number': line_number,
+            'severity': severity_str.upper(),
+            'category': report_result.get('vuln_name'),
+            'description': report_result.get('vuln_type'),
+            'details': '',
+            'reference': f"https://cwe.mitre.org/data/definitions/{cwe_id}.html"
+        }
+        vulnerabilities.append(result_data)
+
 
 
 
@@ -126,13 +149,21 @@ def progpilot_scan():
                 if response.returncode == 0:
                     print('Scanning started')
                     folder_name = folder_name +'/' + branch
-                    progpilot_scan_command = r"progpilot %s" %folder_name
-                    print(progpilot_scan_command)
+                    progpilot_scan_command = r"php .\\files\\progpilot_v1.1.0.phar %s" %folder_name
                     result = subprocess.run(progpilot_scan_command, shell=True, capture_output=True, text=True)
-                    report = json.loads(result.stdout)
-                    print(report)
+                    if result.returncode == 1:
+                        lines = result.stdout.splitlines()
+
+                        # Filter out lines starting with "Deprecated:"
+                        filtered_lines = [line for line in lines if not line.startswith("Deprecated:")]
+
+                        # Join the filtered lines back into a single string
+                        filtered_output = "\n".join(filtered_lines)
+                        report =   json.loads(filtered_output)
+                    else:
+                        report = []
                     print('==='*50)
-                    if report['files'] != []:
+                    if report != []:
                         result_dict['url'] = url
                         result_dict['report'] = report
                         result_dict['tenant_id'] = str(config['LOCAL']['TENANT_ID'])
@@ -153,7 +184,7 @@ def progpilot_scan():
             if response_repo.returncode == 0:
                 print('Scanning started')
 
-                progpilot_scan_command = r"progpilot %s" %folder_name
+                progpilot_scan_command = r"php .\\files\\progpilot_v1.1.0.phar %s" %folder_name
                 print(progpilot_scan_command)
                 result = subprocess.run(progpilot_scan_command, shell=True, capture_output=True, text=True)
                 report = json.loads(result.stdout)
