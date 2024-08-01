@@ -5,6 +5,7 @@ php_repo/*
 kotlin_repo/*
 python_repo/*
 ruby_repo/*
+apex_repo/*
 
 *.pyc
 *.json

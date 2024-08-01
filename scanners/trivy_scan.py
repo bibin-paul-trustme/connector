@@ -183,4 +183,4 @@ def trivy_scan():
             response_data.append(result_dict)
             push_data(response_data)
 
-trivy_scan()
+# trivy_scan()

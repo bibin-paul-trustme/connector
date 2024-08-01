@@ -164,4 +164,4 @@ def bandit_scan():
                 
             else:
                 print('Unable to checkout the repository')
-bandit_scan()
+# bandit_scan()

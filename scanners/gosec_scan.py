@@ -182,4 +182,4 @@ def gosec_scan():
                 
             else:
                 print('Unable to checkout the repository')
-gosec_scan()
+# gosec_scan()

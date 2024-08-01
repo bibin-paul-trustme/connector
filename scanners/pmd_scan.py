@@ -112,8 +112,15 @@ def nomalize_data(data, url, tenant, branch):
 
 
 
-def pmd_scan():
+def pmd_scan(language):
     print('=================PMD Scan=====================')
+
+    if language == 'JavaScript':
+        RULESET = 'category/ecmascript/errorprone.xml, category/ecmascript/bestpractices.xml, category/ecmascript/codestyle.xml'
+
+    elif language == 'Java':
+        RULESET = 'category/java/security.xml, category/java/performance.xml, category/java/multithreading.xml, category/java/errorprone.xml, category/java/documentation.xml, category/java/codestyle.xml, category/java/bestpractices.xml'
+
     response_data =[]
     config = configparser.ConfigParser()
     config.read('svn_config.ini')
@@ -140,7 +147,7 @@ def pmd_scan():
                 if response.returncode == 0:
                     print('Scanning started')
                     folder_name = folder_name +'/' + branch
-                    pmd_scan_command = r"C:\pmd-bin-7.0.0-rc4\pmd-bin-7.0.0-rc4\bin\pmd.bat check -d %s -f json -R rulesets/java/quickstart.xml" %folder_name
+                    pmd_scan_command = r"C:\pmd-bin-7.0.0-rc4\pmd-bin-7.0.0-rc4\bin\pmd.bat check -d %s -f json -R %s"  % (folder_name, RULESET)
                     print(pmd_scan_command)
                     result = subprocess.run(pmd_scan_command, shell=True, capture_output=True, text=True)
                     report = json.loads(result.stdout)
@@ -182,4 +189,4 @@ def pmd_scan():
                 
             else:
                 print('Unable to checkout the repository')
-pmd_scan()
+# pmd_scan()

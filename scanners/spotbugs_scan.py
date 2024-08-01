@@ -203,4 +203,4 @@ def spotbugs_scan():
                         result_data.append(temp_data)
 
                 push_data(result_data)
-spotbugs_scan()
+# spotbugs_scan()

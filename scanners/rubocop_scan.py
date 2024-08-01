@@ -169,4 +169,4 @@ def rubocop_scan():
                 
             else:
                 print('Unable to checkout the repository')
-rubocop_scan()
+# rubocop_scan()

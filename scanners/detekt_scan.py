@@ -198,4 +198,4 @@ def detekt_scan():
                 
             else:
                 print('Unable to checkout the repository')
-detekt_scan()
+# detekt_scan()

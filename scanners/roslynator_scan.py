@@ -130,4 +130,4 @@ def rosylnator_scan():
             sln_data = scan_and_push(folder_name, account, folder_name, file_name_chunk)
             response_data.append(sln_data)
             push_data(response_data)
-rosylnator_scan()
+# rosylnator_scan()

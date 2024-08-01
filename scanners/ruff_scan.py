@@ -169,4 +169,3 @@ def ruff_scan():
                 
             else:
                 print('Unable to checkout the repository')
-ruff_scan()

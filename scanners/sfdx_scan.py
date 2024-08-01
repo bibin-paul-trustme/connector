@@ -1,4 +1,3 @@
-import csv
 import os
 import subprocess
 import configparser
@@ -18,14 +17,6 @@ from services.svn_services import branch_list, repo_update, push_data
 config = configparser.ConfigParser()
 config.read("svn_config.ini")
 
-def search_csv(search_id):
-    file_path = config['LOCAL']['cwe_data_file']
-    with open(file_path, 'r', newline='', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            if row['CWE-ID'] == search_id:
-                return row['Name']
-        return None
 
 def decode_base64(encoded_data):
     encoded_data = encoded_data.encode('utf-8')
@@ -76,58 +67,76 @@ def count_calculation(data, url, tenant, branch, chunk_name):
         'Authorization': f'Bearer {token}',
         'id' : f'{tenant}'     
     }
-    base_url = config['LOCAL']['trustme_progpilot_count_upload']
+    base_url = config['LOCAL']['trustme_sfdx_count_upload']
     response = requests.post(base_url, cert=(cert_file, key_file), headers=headers, data=count_data)
     print(response.text)
     
-def nomalize_data(data, url, tenant, branch):
-
-    severity_mapping = {
-        "CWE_79": "Medium",
-        "CWE_98": "High",
-        "CWE_95": "High",
-        "CWE_78": "High",
-        "CWE_90": "Medium",
-        "CWE_89": "Medium",
-        "CWE_285": "Medium",
-        "CWE_1004": "Medium",
-        "CWE_346": "Medium",
-        "CWE_295": "High",
-        "CWE_91": "Medium",
-        "CWE_22": "Medium",
-        "CWE_601": "Medium",
-        "CWE_1333": "Medium"
+def xml_file_to_json(xml_file_path):
+    tree = ET.parse(xml_file_path)
+    root = tree.getroot()
+    report_dict = {
+        'version': root.get('version'),
+        'files': []
     }
-    vulnerabilities = []
-    for report_result in data['report']:
-        directory, filename = os.path.split(report_result.get('sink_file',''))
-        line_number = report_result.get('sink_line', '1')
-        filename = filename
-        cwe_id = report_result.get('vuln_cwe')
-        severity_str = severity_mapping.get(cwe_id, "Low")
-        result_data = {
-            'title': search_csv(str(cwe_id.split('_')[1])),
-            'filename': filename,
-            'line_number': line_number,
-            'severity': severity_str.upper(),
-            'category': report_result.get('vuln_name'),
-            'description': report_result.get('vuln_type'),
-            'details': '',
-            'reference': f"https://cwe.mitre.org/data/definitions/{cwe_id}.html"
+    for file_element in root.findall('file'):
+        file_report = {
+            'name': file_element.get('name'),
+            'errors': []
         }
-        vulnerabilities.append(result_data)
+
+        for error_element in file_element.findall('error'):
+            error = {
+                'line': error_element.get('line'),
+                'column': error_element.get('column'),
+                'severity': error_element.get('severity'),
+                'message': error_element.get('message'),
+                'source': error_element.get('source')
+            }
+            file_report['errors'].append(error)
+
+        report_dict['files'].append(file_report)
+
+    return report_dict
+
+def nomalize_data(data, url, tenant, branch):
+    print(data)
+    report_data = []
+    report = data['report']
+    if report:
+        for report_result in report:
+            result_data = {}
+            filename = report_result.get('fileName')
+            violations = report_result['violations']
+            for violation in violations:
+                result_data['filename'] = filename
+                result_data['title'] = violation['message'].strip().split('.')[0]
+
+                if violation['severity'] == 1:
+                    result_data['severity'] = 'HIGH'
+                elif violation['severity'] == 2:
+                    result_data['severity'] = 'MEDIUM'
+                else:
+                    result_data['severity'] = 'LOW'
+
+                result_data['line_number'] = violation.get('line', '1')
+                result_data['category'] = violation.get('category')
+                result_data['description'] = violation['message'].strip()
+                # result_data['scm_link'] = violation['cweid']
+                result_data['reference'] = violation.get('url')
+                result_data['details'] = violation.get('details')
+                report_data.append(violations)
+    print(report_data)
 
 
 
 
-
-def progpilot_scan():
-    print('=================progpilot Scan=====================')
+def sfdx_scan():
+    print('=================sfdx Scan=====================')
     response_data =[]
     config = configparser.ConfigParser()
     config.read('svn_config.ini')
 
-    accounts = config['LOCAL']['PHP_REPO_LIST']
+    accounts = config['LOCAL']['APEX_REPO_LIST']
     svn_path = config['LOCAL']['SVN_PATH']
     print(accounts.split(','))
     
@@ -149,20 +158,20 @@ def progpilot_scan():
                 if response.returncode == 0:
                     print('Scanning started')
                     folder_name = folder_name +'/' + branch
-                    progpilot_scan_command = r"php .\\files\\progpilot_v1.1.0.phar %s" %folder_name
-                    result = subprocess.run(progpilot_scan_command, shell=True, capture_output=True, text=True)
-                    if result.returncode == 1:
-                        lines = result.stdout.splitlines()
+                    command = f'sf scanner run --target {folder_name} --category Security --format json'
+                    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+                    data1 = json.loads(result.stdout) if result.returncode == 0 else []
 
-                        # Filter out lines starting with "Deprecated:"
-                        filtered_lines = [line for line in lines if not line.startswith("Deprecated:")]
-
-                        # Join the filtered lines back into a single string
-                        filtered_output = "\n".join(filtered_lines)
-                        report =   json.loads(filtered_output)
+                    command = f'sf scanner run dfa --target {folder_name} --category Security --format=json'
+                    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+                    if result.returncode == 0:
+                        message, json_string = result.stdout.split('\n', 1)
+                        data2 = json.loads(json_string)
                     else:
-                        report = []
+                        data2 = []
+                    report =  data1 + data2
                     print('==='*50)
+                    print(report)
                     if report != []:
                         result_dict['url'] = url
                         result_dict['report'] = report
@@ -184,10 +193,10 @@ def progpilot_scan():
             if response_repo.returncode == 0:
                 print('Scanning started')
 
-                progpilot_scan_command = r"php .\\files\\progpilot_v1.1.0.phar %s" %folder_name
-                print(progpilot_scan_command)
-                result = subprocess.run(progpilot_scan_command, shell=True, capture_output=True, text=True)
-                report = json.loads(result.stdout)
+                sfdx_scan_command =  f'sf scanner run --target {folder_name} --category Security --format json'
+                print(sfdx_scan_command)
+                result = subprocess.run(sfdx_scan_command, shell=True, capture_output=True, text=True)
+                report = xml_file_to_json('report_sfdx.xml')
                 print('==='*50)
                 if report['files'] != []:
                     result_dict['url'] = url
@@ -199,4 +208,4 @@ def progpilot_scan():
                 
             else:
                 print('Unable to checkout the repository')
-# progpilot_scan()
+# sfdx_scan()

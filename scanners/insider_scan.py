@@ -53,8 +53,17 @@ def decode_base64(encoded_data):
     return decoded_data
 
 
-def insider_scan():
+def insider_scan(language):
     print('started')
+    if language == 'JavaScript':
+        tech = 'javascript'
+    elif language == 'CSharp':
+        tech = 'csharp'
+    elif language == 'Kotlin':
+        tech = 'android'
+    elif language == 'Java':
+        tech = 'java'
+
     file_name_chunk = uuid.uuid4()
     accounts = config['LOCAL']['DOTNET_REPO_LIST']
     response_data =[]
@@ -71,7 +80,7 @@ def insider_scan():
                 else:
                     folder_name = account.split('/')[-1]
                 folder_name = folder_name +'/' + branch
-                command = ['insider','-tech','csharp','-target',folder_name,  '-exclude','.svn','-exclude','.ttf','-exclude','.zip','-exclude','.png','-exclude','.bmp','-exclude','.dll','-exclude','.TTF','-exclude','.sql','-exclude','.pdf','-exclude','.mdb','-exclude','.jpg']
+                command = ['insider','-tech',tech,'-target',folder_name,  '-exclude','.svn','-exclude','.ttf','-exclude','.zip','-exclude','.png','-exclude','.bmp','-exclude','.dll','-exclude','.TTF','-exclude','.sql','-exclude','.pdf','-exclude','.mdb','-exclude','.jpg']
                 print(command)
                 result = subprocess.run(command, capture_output=True, text=True)
                 print(result)
@@ -170,4 +179,4 @@ def insider_scan():
 
 
 
-insider_scan()
+# insider_scan(language)

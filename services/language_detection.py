@@ -4,10 +4,14 @@ config = configparser.ConfigParser()
 config.read('svn_config.ini')
 
 def detect_frameworks_in_directory(root_directory):
+    if root_directory.endswith('/'):
+        folder_name = root_directory.split('/')[-2]
+    else:
+        folder_name = root_directory.split('/')[-1]
     frameworks = {}
     total_files = 0
 
-    for root, dirs, files in os.walk(root_directory):
+    for root, dirs, files in os.walk(folder_name):
         dirs[:] = [d for d in dirs if not d.startswith('.')]
         for file in files:
             if file.startswith('.'):
@@ -61,23 +65,5 @@ def detect_frameworks_in_directory(root_directory):
 
 repo_list = config.get('LOCAL', 'repo_list').split(', ')
 for repo in repo_list:
-    if repo.endswith('/'):
-        folder_name = repo.split('/')[-2]
-    else:
-        folder_name = repo.split('/')[-1]
-    detected_frameworks = detect_frameworks_in_directory(folder_name)
+    detected_frameworks = detect_frameworks_in_directory(repo)
     print(repo , detected_frameworks)
-# print(detected_frameworks)
-# if detected_frameworks == 'java':
-#     existing_values = config.get('LOCAL', 'java_repo_list').split(', ')
-#     existing_values.extend(new_values)
-#     updated_value_string = ', '.join(existing_values)
-#     config.set('LOCAL', 'java_repo_list', updated_value_string)
-# elif detected_frameworks == '.NET':
-#     existing_values = config.get('LOCAL', 'dotnet_repo_list').split(', ')
-#     existing_values.extend(new_values)
-#     updated_value_string = ', '.join(existing_values)
-#     config.set('LOCAL', 'java_repo_list', updated_value_string)
-#     with open('svn_config.ini', 'w') as configfile:
-#         config.write(configfile)
-

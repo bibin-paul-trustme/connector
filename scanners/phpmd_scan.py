@@ -168,4 +168,4 @@ def phpmd_scan():
                 
             else:
                 print('Unable to checkout the repository')
-phpmd_scan()
+# phpmd_scan()
